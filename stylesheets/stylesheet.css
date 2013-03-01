@@ -253,9 +253,8 @@ form {
 }
 
 #main-content h3 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 18px;
-  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif; 
+  font-size: 24px;
   margin-top: 24px;
   margin-bottom: 8px;
   color: #474747;
@@ -269,9 +268,8 @@ form {
 }
 
 #main-content h4 {
-  font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 15px;
-  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif; 
+  font-size: 18px;
   color: #474747;
 } 
 
@@ -284,7 +282,7 @@ h4:before {
 
 #main-content h5 {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  font-size: 14px;
+  font-size: 18px;
   color: #474747;
 } 
 h5:before {
