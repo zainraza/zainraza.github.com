@@ -1,0 +1,30 @@
+<html>
+
+<!-- SOURCE 1 -->
+
+<h3>iOS RTMP -> Red5Pro -> WebRTC in Player: ~500ms</h3>
+<h3>iOS: Red5Pro SDK, Web: JS WebRTC enabled player</h3>
+    <iframe width="640" height="360" src="//206.81.15.248:5080/LiveApp/play.html?name=c2c-red5-zr" frameborder="0"
+      framepadding="0" allowfullscreen></iframe>
+
+    <!-- SOURCE 2 -->
+    <h3>Teradek or OBS RTMP -> AWS Low Latency HLS -> Low latency HLS (Apple's new spec) in Player: ~3-5s</h3>
+    <h3>iOS: Amazon SDK Required, Web: JS Amazon Web Player</h3>
+    <script src="https://player.live-video.net/1.0.0/amazon-ivs-player.min.js"></script>
+    <video id="video-player" playsinline width="640" height="360"></video>
+
+    <script>
+      if (IVSPlayer.isPlayerSupported) {
+        const player = IVSPlayer.create();
+        player.attachHTMLVideoElement(document.getElementById('video-player'));
+        player.load("https://f905067eeb70.us-east-1.playback.live-video.net/api/video/v1/us-east-1.995144700286.channel.K6GwXlJFq04e.m3u8");
+        player.play();
+      }
+    </script>
+
+    <h3>HLS - basic usage: 9-14s</h3>
+    <!-- SOURCE 4 -->
+    <iframe width="640" height="360" src="//206.81.15.248:5080/LiveApp/play.html?name=c2c-red5-zr&playOrder=hls" frameborder="0"
+    framepadding="0" allowfullscreen></iframe>
+
+</html>
